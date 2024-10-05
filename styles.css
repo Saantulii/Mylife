@@ -1,0 +1,83 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(60, 73, 124);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* para que ocupe toda la altura de la ventana */
+  margin: 0;
+}
+
+.container-principal{
+  margin-top: 0px;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 400px;
+  background-color: rgb(64, 75, 126);
+}
+
+.btn,
+.btn1,
+.btn2,
+.btn3,
+.btn4,
+.btn5,
+.btn6{
+  color: aqua;
+  border: none;
+  padding: 15px;
+  font-size: 20px;
+  width: 100%;
+  border-radius: 50px;
+  margin-top: 10px;
+  background-color: rgb(70, 80, 130);
+}
+
+.btn:hover{
+  border: solid rgb(60, 60, 120);
+}
+.btn1:hover{
+  border: solid rgb(60, 60, 120);
+}
+.btn2:hover{
+  border: solid rgb(60, 60, 120);
+}
+.btn3:hover{
+  border: solid rgb(60, 60, 120);
+}
+.btn4:hover{
+  border: solid rgb(60, 60, 120);
+}
+.btn5:hover{
+  border: solid rgb(60, 60, 120);
+}
+.btn6:hover{
+  border: solid rgb(60, 60, 120);
+}
+
+.btn, a
+.btn1, a
+.btn2, a{
+  text-decoration: none;
+  text-decoration-color: none;
+  color: aqua;
+  cursor: pointer;
+}
+
+.img-santi{
+  border-radius: 50px;
+  width: 120px;
+  height: 120px;
+  margin-top: -10px;
+  margin-left: 0px;
+}
+
