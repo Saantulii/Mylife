@@ -4,80 +4,98 @@
   box-sizing: border-box;
 }
 
-body{
-  background-color: rgb(60, 73, 124);
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* para que ocupe toda la altura de la ventana */
-  margin: 0;
+  min-height: 100vh; /* Cambiado a min-height para permitir el desplazamiento */
+  position: relative;
+  overflow: auto; /* Permitir desplazamiento */
 }
 
-.container-principal{
-  margin-top: 0px;
-  border: 1px solid transparent;
+/* Pseudo-elemento para el fondo borroso */
+body::before {
+  content: "";
+  position: fixed; /* Fija la imagen para que no se desplace */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("cruz.jpg") no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(8px); /* Ajusta el nivel de desenfoque según prefieras */
+  z-index: -1; /* Envía el fondo detrás del contenido */
+  opacity: 0.8; /* Opcional: ajusta la opacidad si quieres un efecto más suave */
+}
+
+main {
+  width: 100%;
+  border: none;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center; /* Centrar los botones horizontalmente */
+}
+
+.container-principal {
+  border: 2px solid black;
+  display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.img-santi {
+  width: 100%; /* Ajusta el tamaño según sea necesario */
+  height: 600px;
+}
+
+#p {
+  color: white;
+  background-color: gray;
   text-align: center;
-  width: 400px;
-  background-color: rgb(64, 75, 126);
-}
-
-img{
-  height: 150px;
-  width: 140px;
-}
-img:hover{
-  margin-top: 300px;
-  height: 400px;
-  width: 250px;
-}
-
-a{
-  border-radius: 50px;
-  padding: 13px 140px 13px 140px;
-  border: none;
-  text-align: center;
-  cursor: pointer;
-}
-
-.btn{
-  cursor: default;
-  color: aqua;
-  border: 2px solid white;
-  padding: 15px;
-  font-size: 20px;
+  margin: 0;
   width: 100%;
-  border-radius: 50px;
-  margin-top: 10px;
-  background-color: rgb(70, 80, 130);
+  padding: 20px;
+  font-size: 25px;
 }
 
-.btn:hover{
-  border: solid rgb(60, 60, 120);
+button {
+  border: 1px solid black;
+  background: white;
+  padding: 20px;
+  width: 100%;
+  height: auto;
 }
 
-.btn a{  
-  text-decoration: none;
-  text-decoration-color: none;
-  color: aqua;
-  cursor: pointer;
+button:hover{
+  background-color: antiquewhite;
 }
 
-.btn a:hover{  
-  text-decoration: underline;
-  text-decoration-color: aqua;
-  color: aqua;
-  cursor: pointer;
+button img {
+  width: 140px; /* Ajusta el tamaño de los iconos según sea necesario */
+  height: auto;
+  margin-right: 190px;
 }
 
-.img-santi{
-  border-radius: 50px;
-  width: 120px;
-  height: 120px;
-  margin-top: -10px;
+button a{
+  border: none;
+  padding: 14px 27px 14px 28px;
   margin-left: 0px;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+}
+
+p{
+  background-color: transparent;
+  margin-left: 250px;
+  margin-top: -60px;
+  width: 70px;
+  padding: 0px;
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+p:hover{
+  background-color: aqua;
 }
 
